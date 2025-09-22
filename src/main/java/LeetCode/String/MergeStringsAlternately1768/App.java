@@ -1,11 +1,8 @@
-package com.LeetCode;
+package LeetCode.String.MergeStringsAlternately1768;
 
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main( String[] args )
