@@ -1,4 +1,4 @@
-package LeetCode.Array.KidsWiththeGreatestNumberofCandies1431;
+package LeetCode.Array.CanPlaceFlowers;
 
 import java.util.ArrayList;
 import java.util.List;
