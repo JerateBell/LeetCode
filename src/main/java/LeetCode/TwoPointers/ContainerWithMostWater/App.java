@@ -7,7 +7,7 @@ public class App {
         int res = 0;
         while(i<j){
             res = Math.max(res, (j-i) * Math.min(height[i], height[j]));
-            if(height[j] > height[i])i++;
+            if(height[j] > height[i])   i++;
             else j--;
         }
         return res;

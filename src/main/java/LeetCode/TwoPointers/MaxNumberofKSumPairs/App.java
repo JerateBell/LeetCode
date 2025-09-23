@@ -14,8 +14,8 @@ public class App {
                 i++;
                 j--;
             }
-            else if(nums[i] + nums[j] > k) j--;
-            else i++;
+            else if(nums[i] + nums[j] > k)  j--;
+            else  i++;
         }
         return count;
     }

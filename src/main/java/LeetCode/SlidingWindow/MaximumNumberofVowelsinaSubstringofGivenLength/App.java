@@ -11,6 +11,7 @@ public class App {
         int j = 0;
         int count = 0;
         int res = 0;
+
         while(j < s.length()) {
             if(VOWELS.contains(s.charAt(j))) count++;
             if(j - i + 1 < k) {
