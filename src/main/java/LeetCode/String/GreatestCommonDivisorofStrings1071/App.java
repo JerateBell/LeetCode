@@ -15,7 +15,7 @@ public class App {
         int l1 = str1.length();
         int l2 = str2.length();
 
-        return str1.substring(0,gcd(l1,l2));
+        return str1.substring(0, gcd(l1, l2));
     }
 
     private static int gcd(int a, int b){

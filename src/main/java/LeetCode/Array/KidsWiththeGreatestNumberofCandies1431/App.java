@@ -10,10 +10,10 @@ public class App {
 
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         int maxCandies = 0;
+        List<Boolean> result = new ArrayList<Boolean>();
         for(int i = 0; i < candies.length; i++){
             maxCandies = Math.max(maxCandies, candies[i]);
         }
-        List<Boolean> result = new ArrayList<Boolean>();
         for(int i : candies){
             result.add(i + extraCandies >= maxCandies);
         }

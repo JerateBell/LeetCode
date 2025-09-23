@@ -34,7 +34,4 @@ Duyệt qua từng chữ tại index 0,1,2,... của 2 String và thêm vào Str
 1. Tạo String rỗng để lưu kết quả
 2. So sánh độ dài String của 2 chuỗi. Tạo 1 biến lưu maxLength.
 3. Duyệt i chạy từ 0 -> maxLength, thêm lần lượt các chữ Str1[i] sau đó là Str2[i] khi i < độ dài Str1, Str2.
-4. In ra kết quả
-
-
-
+4. In ra kết qủa

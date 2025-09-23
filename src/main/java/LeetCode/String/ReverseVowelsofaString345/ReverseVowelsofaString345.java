@@ -1,6 +1,11 @@
 package LeetCode.String.ReverseVowelsofaString345;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ReverseVowelsofaString345 {
+    public static final List<Character> VOWELS = Arrays.asList('a', 'e', 'i', 'o', 'u');
+
     public static void main(String[] args) {
         System.out.println(reverseVowels("IceCreAm"));
     }
@@ -10,12 +15,8 @@ public class ReverseVowelsofaString345 {
         char[] arr = s.toCharArray();
 
         while (i < j) {
-            while (i < j && !isVowels(arr[i])) {
-                i++;
-            }
-            while (i < j && !isVowels(arr[j])) {
-                j--;
-            }
+            while (i < j && !isVowels(arr[i])) i++;
+            while (i < j && !isVowels(arr[j])) j--;
             if (i < j) {
                 char temp = arr[i];
                 arr[i] = arr[j];
@@ -29,6 +30,6 @@ public class ReverseVowelsofaString345 {
 
     public static boolean isVowels(Character c) {
         c= Character.toLowerCase(c);
-        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+        return VOWELS.contains(c);
     }
 }
