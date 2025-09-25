@@ -1,7 +1,6 @@
 Đề bài:
 
-https://leetcode.com/problems/n-th-tribonacci-number/?envType=study-plan-v2&envId=leetcode-75
-
+https://leetcode.com/problems/longest-palindromic-substring/description/
 Cách giải:
 1. Tạo mảng dp[i][j] với i->j là vị trí start và end của chuỗi sub string. 
 2. Đầu tiên tất cả dp[i][j] = false
