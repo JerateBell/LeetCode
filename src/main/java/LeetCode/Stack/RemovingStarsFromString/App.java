@@ -1,4 +1,4 @@
-package LeetCode.Stack;
+package LeetCode.Stack.RemovingStarsFromString;
 
 import java.util.Stack;
 
@@ -8,16 +8,14 @@ public class App {
         String res = "";
         int count = 0;
 
-        for(char c : s.toCharArray()){
-            stack.push(c);
-        }
+        for (char c : s.toCharArray()) stack.push(c);
 
-        while(!stack.empty()){
+        while (!stack.empty()) {
             char c = stack.pop();
 
             if (c == '*') count++;
             else {
-                if(count == 0) res = String.valueOf(c)  + res;
+                if(count == 0) res = String.valueOf(c) + res;
                 else count--;
             }
         }
