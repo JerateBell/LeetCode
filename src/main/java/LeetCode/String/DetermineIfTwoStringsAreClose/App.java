@@ -4,12 +4,8 @@ import java.util.Arrays;
 
 public class App {
     public boolean closeStrings(String word1, String word2) {
-        int[] freq1 = new int[26];
-        int[] freq2 = new int[26];
-
-        for(char ch : word1.toCharArray()) freq1[ch - 'a']++;
-
-        for(char ch : word2.toCharArray()) freq2[ch - 'a']++;
+        int[] freq1 = countFreq(word1);
+        int[] freq2 = countFreq(word2);
 
         for(int i = 0; i < 26; i++) {
             boolean appearInFirst = freq1[i] > 0;
@@ -23,10 +19,14 @@ public class App {
         Arrays.sort(freq1);
         Arrays.sort(freq2);
 
-        for(int i = 0; i < 26; i++){
-            if (freq1[i] != freq2[i]) return false;
-        }
+        return Arrays.equals(freq1, freq2);
+    }
 
-        return true;
+    private static int[] countFreq(String s){
+        int[] freq = new int[26];
+
+        for (char ch : s.toCharArray()) freq[ch - 'a']++;
+
+        return freq;
     }
 }
