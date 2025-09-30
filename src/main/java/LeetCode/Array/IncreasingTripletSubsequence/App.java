@@ -6,9 +6,15 @@ public class App {
         int second = Integer.MAX_VALUE;
 
         for (int i : nums) {
-            if (i <= first) first = i;
-            else if (i <= second) second = i;
-            else return true;
+            if (i <= first) {
+                first = i;
+            }
+            else if (i <= second) {
+                second = i;
+            }
+            else {
+                return true;
+            }
         }
 
         return false;

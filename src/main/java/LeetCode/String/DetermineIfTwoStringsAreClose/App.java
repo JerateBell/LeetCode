@@ -7,16 +7,15 @@ public class App {
         int[] freq1 = new int[26];
         int[] freq2 = new int[26];
 
-        for(char ch : word1.toCharArray()){
-            freq1[ch - 'a']++;
-        }
+        for(char ch : word1.toCharArray()) freq1[ch - 'a']++;
 
-        for(char ch : word2.toCharArray()){
-            freq2[ch - 'a']++;
-        }
+        for(char ch : word2.toCharArray()) freq2[ch - 'a']++;
 
         for(int i = 0; i < 26; i++) {
-            if ((freq1[i] == 0) != (freq2[i] == 0)){
+            boolean appearInFirst = freq1[i] > 0;
+            boolean appearInSecond = freq2[i] > 0;
+
+            if (appearInFirst != appearInSecond) {
                 return false;
             }
         }
@@ -25,9 +24,7 @@ public class App {
         Arrays.sort(freq2);
 
         for(int i = 0; i < 26; i++){
-            if (freq1[i] != freq2[i]){
-                return false;
-            }
+            if (freq1[i] != freq2[i]) return false;
         }
 
         return true;
