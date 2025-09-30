@@ -5,7 +5,7 @@ public class App {
         int n = nums.length;
         int[] pre = new int[n];
         int[] suff = new int[n];
-        int res[] = new int[n];
+        int[] res = new int[n];
         pre[0] = 1;
         suff[n - 1] = 1;
 
@@ -13,11 +13,10 @@ public class App {
             suff[i] = suff[i + 1] * nums[i + 1];
         }
 
+        res[0] = pre[0] * suff[0];
+
         for(int i = 1; i < n; i++) {
             pre[i] = pre[i - 1] * nums[i - 1];
-        }
-
-        for(int i = 0; i < n; i++) {
             res[i] = pre[i] * suff[i];
         }
 
