@@ -9,6 +9,7 @@ public class App {
         for(int i = 0; i < s.length(); i++){
             dp[i][i] = true;
         }
+
         for(int i = 0; i < s.length() - 1 ; i++){
             if(s.charAt(i) == s.charAt(i+1)){
                 dp[i][i+1] = true;
@@ -18,6 +19,7 @@ public class App {
                 }
             }
         }
+
         for(int len = 3; len <= s.length(); len++){
             for(int i = 0; i < s.length() - len + 1; i++){
                 int j = i + len - 1;

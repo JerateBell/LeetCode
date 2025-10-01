@@ -5,13 +5,15 @@ public class App {
         int count = 0;
         int maxRange = 0;
         int indexToReachMaxRange = 0;
+        int n = nums.length - 1;
 
-        for (int i = 0; i < nums.length - 1; i++) {
+        for (int i = 0; i < n; i++) {
             maxRange = Math.max(maxRange, i + nums[i]);
 
             if(i == indexToReachMaxRange){
                 count++;
                 indexToReachMaxRange = maxRange;
+                if(indexToReachMaxRange >= n) break;
             }
         }
         return count;

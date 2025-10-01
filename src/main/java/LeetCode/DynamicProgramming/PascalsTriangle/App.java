@@ -8,9 +8,7 @@ public class App {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> res = new ArrayList<>();
 
-        if(numRows == 0){
-            return res;
-        }
+        if(numRows == 0) return res;
 
         if(numRows == 1){
             List<Integer> firstRow = new ArrayList<>();
