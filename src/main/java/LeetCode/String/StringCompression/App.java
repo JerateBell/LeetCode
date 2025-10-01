@@ -14,8 +14,9 @@ public class App {
 
             chars[indexAns++] = currentChar;
 
-            if(count != 1)
-                for(char c : Integer.toString(count).toCharArray()) chars[indexAns++] = c;
+            if (count != 1) {
+                for (char c : Integer.toString(count).toCharArray()) chars[indexAns++] = c;
+            }
         }
 
         return indexAns;
